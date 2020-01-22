@@ -1,6 +1,6 @@
-# 11 Cam
+# 11 Cam Min
 
-iPhone 11 Camera Interface
+iPhone 11 Zoom and flip Controls
 
 ## Compatibility
 
