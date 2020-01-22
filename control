@@ -1,9 +1,9 @@
-Package: com.michaelmelita.11cam
-Name: 11Cam
+Package: com.michaelmelita.11cammin
+Name: 11Cam Minimal
 Depends: mobilesubstrate, preferenceloader
 Version: 0.0.1
 Architecture: iphoneos-arm
-Description: iPhone 11 Cam for iOS 13
+Description: iPhone 11 Camera Zoom Dial for iOS 13
 Maintainer: Michael Melita
 Author: Michael Melita
 Section: Tweaks
