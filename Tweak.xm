@@ -6,3 +6,8 @@
     return YES;
 }
 %end
+%hook CAMFlipButton 
+-(BOOL)useCTMAppearance {
+    return YES;
+}
+%end
