@@ -1,5 +1,5 @@
 Package: com.michaelmelita.11cammin
-Name: 11CamMin DualLens
+Name: 11CamMin SingleLens
 Depends: mobilesubstrate, preferenceloader
 Version: 0.0.1
 Architecture: iphoneos-arm
