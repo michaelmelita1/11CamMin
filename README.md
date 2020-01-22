@@ -1,4 +1,4 @@
-# 11CamMin DualLens
+# 11CamMin SingleLens
 
 iPhone 11 Zoom and flip Controls
 
