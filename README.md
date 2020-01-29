@@ -1,7 +1,7 @@
-# 11CamMin SingleLens
+# 11CamMin
 
 iPhone 11 Zoom and flip Controls
 
 ## Compatibility
 
-iPhone SE, 6s/Plus and 7 running iOS 13 or later
+iPhone SE to X running iOS 13 or later
