@@ -9,7 +9,6 @@ include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = 11cammin
 11cammin_FILES = Tweak.xm
-11cammin_LIBRARIES = MobileGestalt
 ARCHS = arm64
 
 include $(THEOS_MAKE_PATH)/tweak.mk
