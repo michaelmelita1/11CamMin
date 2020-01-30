@@ -1,29 +1,24 @@
-static bool isDualCam;
+#import <sys/utsname.h>
+
+struct utsname systemInfo;
+uname(&systemInfo);  
+
+NSString *device = @(systemInfo.machine);
 
 %hook CAMCaptureCapabilities 
   -(BOOL)isBackDualSupported {//Enables Zoom Slider on Single Cam Devices
-   return isDualCam = %orig;
-   if(isDualCam == NO){ 
-   return YES;
-      }
-   else{
+   if([device isEqualToString:@"iPhone10,6"]{ 
    return YES;
       }
    }
    -(BOOL)isFrontPortraitModeSupported {
-   if(isDualCam == NO){ 
+   if([device isEqualToString:@"iPhone10,6"]{ 
    return NO;
-      }
-   else{
-   return %orig;
       }
    }
    -(BOOL)isBackPortraitModeSupported {
-   if(isDualCam == NO){ 
+   if([device isEqualToString:@"iPhone10,6"]{ 
    return NO;
-      }
-   else{
-   return %orig;
       }
    }
   -(BOOL)deviceSupportsCTM { //Enables iPhone 11 Style Zoom Slider
@@ -35,4 +30,3 @@ static bool isDualCam;
    return YES;
    }
 %end
-
