@@ -6,13 +6,9 @@ static BOOL isDualCam;
    }
   -(BOOL)isBackDualSupported { 
    return isDualCam = %orig;
-   }
-   
-//Enables Zoom Slider on Single Cam Devices
-
-if(!isDualCam) {
-   -(BOOL)isBackDualSupported { 
+   if(!isDualCam){ //Enables Zoom Slider on Single Cam Devices
    return YES;
+      }
    }
    -(BOOL)isFrontPortraitModeSupported {
    return NO;
