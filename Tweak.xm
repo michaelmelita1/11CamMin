@@ -1,12 +1,13 @@
 #import <sys/utsname.h>
 
+%ctor {
 struct utsname systemInfo;
 uname(&systemInfo);  
-
 NSString *device = @(systemInfo.machine);
+}
 
 %hook CAMCaptureCapabilities 
-  -(BOOL)isBackDualSupported {//Enables Zoom Slider on Single Cam Devices
+  -(BOOL)isBackDualSupported {                          //Enables Zoom Slider on Single Cam Devices
    if([device isEqualToString:@"iPhone10,6"]{ 
    return YES;
       }
@@ -21,12 +22,12 @@ NSString *device = @(systemInfo.machine);
    return NO;
       }
    }
-  -(BOOL)deviceSupportsCTM { //Enables iPhone 11 Style Zoom Slider
+  -(BOOL)deviceSupportsCTM {                           //Enables iPhone 11 Style Zoom Slider
    return YES;
    }
 %end
 %hook CAMFlipButton 
-   -(BOOL)_useCTMAppearance {  //iPhone 11 Flip Button
+   -(BOOL)_useCTMAppearance {                          //iPhone 11 Flip Button
    return YES;
    }
 %end
