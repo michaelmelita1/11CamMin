@@ -1,6 +1,6 @@
 #import <sys/utsname.h>  
 struct utsname systemInfo
-uname(&systemInfo)
+uname(&systemInfo);
 
 NSString*device = @(systemInfo.machine)
 
