@@ -1,8 +1,5 @@
 %hook CAMCaptureCapabilities 
--(BOOL)deviceSupportsCTM {
-    return YES;
-}
-if (isBackDualSupported) return false;
+if (isBackDualSupported) return false {
    -(BOOL)isBackDualSupported {
    return YES;
    }
@@ -12,6 +9,7 @@ if (isBackDualSupported) return false;
    -(BOOL)isBackPortraitModeSupported {
    return NO;
    }
+  }
 %end
 %hook CAMFlipButton 
 -(BOOL)_useCTMAppearance {
