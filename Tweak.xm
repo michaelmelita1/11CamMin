@@ -1,4 +1,4 @@
-#import <sys/utsname.h>  
+#include <sys/utsname.h>
 
 struct utsname systemInfo; 
 uname(&systemInfo);  
