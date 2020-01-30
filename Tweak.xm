@@ -17,9 +17,9 @@
    
 %end
 %hook CAMFlipButton 
--(BOOL)_useCTMAppearance {
+    -(BOOL)_useCTMAppearance {
     return YES;
-}
+    }
 %end
 
  
