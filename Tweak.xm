@@ -2,7 +2,7 @@
 -(BOOL)deviceSupportsCTM {
     return YES;
 }
-if (isBackDualSupported) return flase;
+if (isBackDualSupported) return false;
    -(BOOL)isBackDualSupported {
    return YES;
    }
