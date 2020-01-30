@@ -1,8 +1,8 @@
 #import <sys/utsname.h>  
-struct utsname systemInfo; 
-uname(&systemInfo);  
+struct utsname systemInfo
+uname(&systemInfo)
 
-NSString*device = @(systemInfo.machine);
+NSString*device = @(systemInfo.machine)
 
 switch (n) {
         case 1:
