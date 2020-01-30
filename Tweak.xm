@@ -3,16 +3,16 @@
     return YES;
 }
 if (isBackDualSupported) return flase;
--(BOOL)isBackDualSupported {
- return YES;
- }
- -(BOOL)isFrontPortraitModeSupported{
- return NO;
- }
- -(BOOL)isBackPortraitModeSupported {
- return NO;
- }
-$end 
+   -(BOOL)isBackDualSupported {
+   return YES;
+   }
+   -(BOOL)isFrontPortraitModeSupported{
+   return NO;
+   }
+   -(BOOL)isBackPortraitModeSupported {
+   return NO;
+   }
+   $end 
 %end
 %hook CAMFlipButton 
 -(BOOL)_useCTMAppearance {
