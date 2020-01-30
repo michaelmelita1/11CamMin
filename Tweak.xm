@@ -1,5 +1,35 @@
+#import <sys/utsname.h>  
+struct utsname systemInfo; 
+uname(&systemInfo);  
+
+NSString *device = @(systemInfo.machine);
+
+switch (device) {
+        case 1:
+            [device isEqualToString:@"iPhone8,1"]
+            break;
+        case 2:
+            [device isEqualToString:@"iPhone8,2"]
+            break;
+        case 3:
+            [device isEqualToString:@"iPhone8,4"]
+            break;
+        case 4:
+             [device isEqualToString:@"iPhone9,1"]
+            break;
+        case 5:
+            [device isEqualToString:@"iPhone9,3"]
+            break;
+        case 4:
+             [device isEqualToString:@"iPhone10,1"]
+            break;
+        case 5:
+            [device isEqualToString:@"iPhone10,4"]
+            break;
+    }
+
 %hook CAMCaptureCapabilities 
-if (isBackDualSupported) return false {
+if (device) return 1 || 2 || 3 || 4 || 5 {
    -(BOOL)isBackDualSupported {
    return YES;
    }
