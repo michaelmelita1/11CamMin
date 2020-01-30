@@ -1,4 +1,4 @@
-BOOL isDualCam;
+static bool isDualCam;
 
 %hook CAMCaptureCapabilities 
   -(BOOL)deviceSupportsCTM { //Enables iPhone 11 Zoom Slider
@@ -7,10 +7,11 @@ BOOL isDualCam;
   -(BOOL)isBackDualSupported { 
    return isDualCam = %orig;
    }
-%end
+   
 //Enables Zoom Slider on Single Cam Devices
-if (isDualCam) {
-  -(BOOL)isBackDualSupported { 
+
+if(!isDualCam){
+   -(BOOL)isBackDualSupported { 
    return YES;
    }
    -(BOOL)isFrontPortraitModeSupported {
@@ -20,11 +21,8 @@ if (isDualCam) {
    return NO;
    }
  }
-
+%end
 %hook CAMFlipButton 
    -(BOOL)_useCTMAppearance {  //iPhone 11 Flip Button
    return YES;
    }
-%end
-
- 
