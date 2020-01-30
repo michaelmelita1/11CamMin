@@ -12,7 +12,7 @@ if (isBackDualSupported) return false;
    -(BOOL)isBackPortraitModeSupported {
    return NO;
    }
-   $end 
+   %end 
 %end
 %hook CAMFlipButton 
 -(BOOL)_useCTMAppearance {
