@@ -2,6 +2,7 @@
 -(BOOL)deviceSupportsCTM {
     return YES;
 }
+if (isBackDualSupported) return flase;
 -(BOOL)isBackDualSupported {
  return YES;
  }
@@ -11,6 +12,7 @@
  -(BOOL)isBackPortraitModeSupported {
  return NO;
  }
+$end 
 %end
 %hook CAMFlipButton 
 -(BOOL)_useCTMAppearance {
