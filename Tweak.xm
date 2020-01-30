@@ -8,17 +8,17 @@
 %hook CAMCaptureCapabilities
    NSString *device = @(systemInfo.machine);
    -(BOOL)isBackDualSupported {                    
-       if([device isEqualToString:@"iPhone8,3"]){ 
+       if([device isEqualToString:@"iPhone8,1"] || [device isEqualToString:@"iPhone8,4"] || [device isEqualToString:@"iPhone9,1"] || [device isEqualToString:@"iPhone9,3"] ||[ device isEqualToString:@"iPhone10,1"] || [device isEqualToString:@"iPhone10,4"]){ 
           return YES;
           }
    }
    -(BOOL)isFrontPortraitModeSupported {
-       if([device isEqualToString:@"iPhone10,6"]){ 
+       if([device isEqualToString:@"iPhone8,1"] || [device isEqualToString:@"iPhone8,4"] || [device isEqualToString:@"iPhone9,1"] || [device isEqualToString:@"iPhone9,3"] ||[ device isEqualToString:@"iPhone10,1"] || [device isEqualToString:@"iPhone10,4"]){ 
           return NO;
           }
    }
    -(BOOL)isBackPortraitModeSupported {
-       if([device isEqualToString:@"iPhone10,6"]){ 
+       if([device isEqualToString:@"iPhone8,1"] || [device isEqualToString:@"iPhone8,4"] || [device isEqualToString:@"iPhone9,1"] || [device isEqualToString:@"iPhone9,3"] ||[ device isEqualToString:@"iPhone10,1"] || [device isEqualToString:@"iPhone10,4"]){ 
           return NO;
           }
    }
@@ -31,4 +31,3 @@
        return YES;
        }
 %end
-
