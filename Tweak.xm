@@ -1,5 +1,3 @@
-#import <sys/utsname.h>
-
 %hook CAMCaptureCapabilities 
   -(BOOL)deviceSupportsCTM { //Enables iPhone 11 Zoom Slider
    return YES;
