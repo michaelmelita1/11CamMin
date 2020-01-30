@@ -26,3 +26,4 @@ if(!isDualCam) {
    -(BOOL)_useCTMAppearance {  //iPhone 11 Flip Button
    return YES;
    }
+%end
