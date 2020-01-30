@@ -10,13 +10,12 @@ NSString *device = @(systemInfo.machine);
       if([device isEqualToString:@"iPhone10,6"]
          return YES;
    }
-   -(BOOL)isFrontPortraitModeSupported{
+   -(BOOL)isFrontPortraitModeSupported {
    return NO;
    }
    -(BOOL)isBackPortraitModeSupported {
    return NO;
    }
-  }
 %end
 %hook CAMFlipButton 
 -(BOOL)_useCTMAppearance {
