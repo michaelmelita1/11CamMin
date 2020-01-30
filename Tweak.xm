@@ -4,11 +4,10 @@ BOOL isDualCam;
   -(BOOL)deviceSupportsCTM { //Enables iPhone 11 Zoom Slider
    return YES;
    }
-
   -(BOOL)isBackDualSupported { 
    return isDualCam = %orig;
-
-
+   }
+%end
 //Enables Zoom Slider on Single Cam Devices
 if (isDualCam) {
   -(BOOL)isBackDualSupported { 
@@ -21,7 +20,7 @@ if (isDualCam) {
    return NO;
    }
  }
-%end
+
 %hook CAMFlipButton 
    -(BOOL)_useCTMAppearance {  //iPhone 11 Flip Button
    return YES;
