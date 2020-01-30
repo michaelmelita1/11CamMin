@@ -2,9 +2,9 @@
 struct utsname systemInfo; 
 uname(&systemInfo);  
 
-NSString *device = @(systemInfo.machine);
+NSString*device = @(systemInfo.machine);
 
-switch (device) {
+switch (n) {
         case 1:
             [device isEqualToString:@"iPhone8,1"]
             break;
@@ -29,7 +29,7 @@ switch (device) {
     }
 
 %hook CAMCaptureCapabilities 
-if (device) return 1 || 2 || 3 || 4 || 5 || 6 || 7 {
+  if (n) return 1 || 2 || 3 || 4 || 5 || 6 || 7 {
    -(BOOL)isBackDualSupported {
    return YES;
    }
