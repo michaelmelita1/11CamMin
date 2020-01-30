@@ -1,4 +1,4 @@
-static bool isDualCam;
+static BOOL isDualCam;
 
 %hook CAMCaptureCapabilities 
   -(BOOL)deviceSupportsCTM { //Enables iPhone 11 Zoom Slider
@@ -10,7 +10,7 @@ static bool isDualCam;
    
 //Enables Zoom Slider on Single Cam Devices
 
-if(!isDualCam){
+if(!isDualCam) {
    -(BOOL)isBackDualSupported { 
    return YES;
    }
