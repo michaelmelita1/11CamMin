@@ -1,4 +1,4 @@
-#include <sys/utsname.h>
+#import <sys/utsname.h>
 
 struct utsname systemInfo; 
 uname(&systemInfo);  
@@ -6,9 +6,9 @@ uname(&systemInfo);
 NSString *device = @(systemInfo.machine);
 
 %hook CAMCaptureCapabilities 
-  if([device isEqualToString:@"iPhone10,6"]{
-      -(BOOL)isBackDualSupported {
-   return YES;
+  -(BOOL)isBackDualSupported {
+      if([device isEqualToString:@"iPhone10,6"]
+         return YES;
    }
    -(BOOL)isFrontPortraitModeSupported{
    return NO;
