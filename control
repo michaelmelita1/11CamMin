@@ -1,7 +1,7 @@
-Package: com.michaelmelita.11cammin1lens
-Name: 11CamMin SingleLens
-Depends: mobilesubstrate, preferenceloader
-Version: 0.0.2
+Package: com.michaelmelita.11cammin
+Name: 11CamMin
+Depends: mobilesubstrate
+Version: 0.0.3
 Architecture: iphoneos-arm
 Description: iPhone 11 Camera Zoom Dial for iOS 13
 Maintainer: Michael Melita
