@@ -20,16 +20,16 @@ switch (device) {
         case 5:
             [device isEqualToString:@"iPhone9,3"]
             break;
-        case 4:
+        case 6:
              [device isEqualToString:@"iPhone10,1"]
             break;
-        case 5:
+        case 7:
             [device isEqualToString:@"iPhone10,4"]
             break;
     }
 
 %hook CAMCaptureCapabilities 
-if (device) return 1 || 2 || 3 || 4 || 5 {
+if (device) return 1 || 2 || 3 || 4 || 5 || 6 || 7 {
    -(BOOL)isBackDualSupported {
    return YES;
    }
