@@ -1,6 +1,6 @@
 %hook CAMCaptureCapabilities 
--(BOOL)deviceSupportsCTM {
-    return YES;
+-(long long) zoomDialStyle {
+		return 1;
 }
 %end
 %hook CAMFlipButton 
